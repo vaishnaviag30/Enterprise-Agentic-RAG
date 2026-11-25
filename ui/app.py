@@ -52,8 +52,7 @@ with st.sidebar:
     st.title("🧠 Agent OS")
     st.markdown("---")
     st.success(f"Logfire: {LOGFIRE_STATUS}")
-    st.info(f"Memory ID: {st.session_state.session_id[:8]}")
-    
+        
     if st.button("🗑️ Clear History & Memory", width="stretch", type="primary"):
         logfire.warn(f"🗑️ Memory Wipe Triggered for session: {st.session_state.session_id}")
         st.session_state.messages = []
